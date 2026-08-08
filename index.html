@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Một Ngày Của Chúng Mình — 09.08.2026</title>
+<meta name="description" content="Lịch trình hẹn hò Chủ Nhật 09/08/2026">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>💌</text></svg>">
+<style>
+  :root{
+    --bg:#fff7f4;
+    --bg-soft:#ffffff;
+    --ink:#3b2a2f;
+    --ink-soft:#7a6469;
+    --accent:#e0607e;
+    --accent-2:#f2a08b;
+    --accent-3:#a5789e;
+    --line:#f0d9d5;
+    --shadow:0 18px 40px -24px rgba(120,60,70,.45);
+    --radius:20px;
+  }
+  @media (prefers-color-scheme: dark){
+    :root{
+      --bg:#171114;
+      --bg-soft:#221a1e;
+      --ink:#f7ecef;
+      --ink-soft:#b9a3a9;
+      --accent:#ff8fa9;
+      --accent-2:#f7b79f;
+      --accent-3:#c9a4c4;
+      --line:#3a2b31;
+      --shadow:0 18px 40px -24px rgba(0,0,0,.7);
+    }
+  }
+  *{box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{
+    margin:0;
+    background:
+      radial-gradient(1000px 600px at 12% -8%, rgba(224,96,126,.16), transparent 60%),
+      radial-gradient(900px 500px at 92% 4%, rgba(242,160,139,.18), transparent 62%),
+      var(--bg);
+    color:var(--ink);
+    font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif;
+    line-height:1.65;
+    -webkit-font-smoothing:antialiased;
+  }
+  .wrap{max-width:760px;margin:0 auto;padding:0 20px}
+
+  /* ---------- Hero ---------- */
+  header.hero{padding:64px 0 40px;text-align:center}
+  .kicker{
+    display:inline-block;letter-spacing:.22em;text-transform:uppercase;
+    font-size:11px;font-weight:700;color:var(--accent);
+    border:1px solid var(--line);border-radius:999px;padding:7px 16px;background:var(--bg-soft);
+  }
+  h1{
+    font-size:clamp(34px,7.5vw,58px);line-height:1.08;margin:22px 0 10px;font-weight:800;letter-spacing:-.02em;
+    background:linear-gradient(120deg,var(--accent),var(--accent-2) 55%,var(--accent-3));
+    -webkit-background-clip:text;background-clip:text;color:transparent;
+  }
+  .date{color:var(--ink-soft);font-size:16px;margin:0}
+
+  .countdown{
+    margin:30px auto 0;display:flex;gap:10px;justify-content:center;flex-wrap:wrap;
+  }
+  .cd-box{
+    background:var(--bg-soft);border:1px solid var(--line);border-radius:16px;
+    padding:12px 6px;min-width:74px;box-shadow:var(--shadow);
+  }
+  .cd-num{font-size:26px;font-weight:800;font-variant-numeric:tabular-nums;line-height:1.1}
+  .cd-lbl{font-size:10px;letter-spacing:.16em;text-transform:uppercase;color:var(--ink-soft)}
+  #cd-msg{margin:14px 0 0;color:var(--ink-soft);font-size:14px}
+
+  /* ---------- Timeline ---------- */
+  main{padding:26px 0 10px}
+  .section-title{
+    display:flex;align-items:center;gap:12px;margin:26px 0 6px;
+    font-size:13px;letter-spacing:.18em;text-transform:uppercase;color:var(--ink-soft);font-weight:700;
+  }
+  .section-title::after{content:"";flex:1;height:1px;background:var(--line)}
+
+  .timeline{position:relative;margin:22px 0 0;padding-left:66px}
+  .timeline::before{
+    content:"";position:absolute;left:26px;top:14px;bottom:14px;width:2px;
+    background:linear-gradient(var(--accent),var(--accent-2),var(--accent-3));opacity:.4;border-radius:2px;
+  }
+  .stop{position:relative;margin-bottom:18px;opacity:0;transform:translateY(18px);transition:opacity .6s ease,transform .6s ease}
+  .stop.in{opacity:1;transform:none}
+  .dot{
+    position:absolute;left:-53px;top:20px;width:28px;height:28px;border-radius:50%;
+    background:var(--bg-soft);border:2px solid var(--accent);display:grid;place-items:center;
+    font-size:14px;box-shadow:0 0 0 5px var(--bg);
+  }
+  .card{
+    background:var(--bg-soft);border:1px solid var(--line);border-radius:var(--radius);
+    padding:18px 20px;box-shadow:var(--shadow);
+  }
+  .card.now{border-color:var(--accent);box-shadow:0 0 0 3px rgba(224,96,126,.14),var(--shadow)}
+  .card.done{opacity:.62}
+  .time{
+    display:inline-flex;align-items:center;gap:8px;font-weight:800;color:var(--accent);
+    font-size:14px;font-variant-numeric:tabular-nums;letter-spacing:.02em;
+  }
+  .badge-now{
+    font-size:10px;letter-spacing:.12em;text-transform:uppercase;background:var(--accent);color:#fff;
+    border-radius:999px;padding:3px 9px;font-weight:700;
+  }
+  .card h3{margin:6px 0 6px;font-size:20px;font-weight:750;letter-spacing:-.01em}
+  .card p{margin:0;color:var(--ink-soft);font-size:15px}
+  .meta{margin-top:12px;display:flex;flex-wrap:wrap;gap:8px}
+  .tag{
+    font-size:12px;color:var(--ink-soft);background:transparent;border:1px solid var(--line);
+    border-radius:999px;padding:4px 11px;
+  }
+
+  /* ---------- Checklist ---------- */
+  .checks{
+    background:var(--bg-soft);border:1px solid var(--line);border-radius:var(--radius);
+    padding:8px 20px;box-shadow:var(--shadow);margin-top:14px;
+  }
+  .check{display:flex;gap:12px;align-items:center;padding:11px 0;border-bottom:1px solid var(--line);cursor:pointer}
+  .check:last-child{border-bottom:none}
+  .check input{appearance:none;width:20px;height:20px;flex:none;border:2px solid var(--line);border-radius:7px;cursor:pointer;transition:.18s;position:relative}
+  .check input:checked{background:var(--accent);border-color:var(--accent)}
+  .check input:checked::after{content:"✓";position:absolute;inset:0;display:grid;place-items:center;color:#fff;font-size:13px;font-weight:800}
+  .check span{font-size:15px;transition:.18s}
+  .check input:checked + span{text-decoration:line-through;color:var(--ink-soft)}
+
+  footer{text-align:center;padding:48px 0 60px;color:var(--ink-soft);font-size:14px}
+  footer .heart{color:var(--accent);font-size:22px;display:block;margin-bottom:8px;animation:beat 1.8s ease-in-out infinite}
+  @keyframes beat{0%,100%{transform:scale(1)}18%{transform:scale(1.18)}36%{transform:scale(1)}}
+
+  @media (max-width:520px){
+    .timeline{padding-left:52px}
+    .timeline::before{left:19px}
+    .dot{left:-46px;width:24px;height:24px;font-size:12px}
+    .card{padding:16px}
+  }
+  @media (prefers-reduced-motion: reduce){
+    .stop{opacity:1;transform:none;transition:none}
+    footer .heart{animation:none}
+  }
+</style>
+</head>
+<body>
+
+<header class="hero">
+  <div class="wrap">
+    <span class="kicker">Lịch trình hẹn hò</span>
+    <h1>Một Ngày<br>Của Chúng Mình</h1>
+    <p class="date">Chủ Nhật · 09 tháng 08, 2026 · 10:00 – 22:00</p>
+
+    <div class="countdown" id="countdown">
+      <div class="cd-box"><div class="cd-num" id="cd-d">--</div><div class="cd-lbl">Ngày</div></div>
+      <div class="cd-box"><div class="cd-num" id="cd-h">--</div><div class="cd-lbl">Giờ</div></div>
+      <div class="cd-box"><div class="cd-num" id="cd-m">--</div><div class="cd-lbl">Phút</div></div>
+      <div class="cd-box"><div class="cd-num" id="cd-s">--</div><div class="cd-lbl">Giây</div></div>
+    </div>
+    <p id="cd-msg">đếm ngược tới giờ đón nàng</p>
+  </div>
+</header>
+
+<main class="wrap">
+  <div class="section-title">Hành trình</div>
+
+  <div class="timeline" id="timeline">
+
+    <article class="stop" data-start="10:00" data-end="11:00">
+      <div class="dot">🚗</div>
+      <div class="card">
+        <div class="time"><span>10:00</span></div>
+        <h3>Đón nàng</h3>
+        <p>Xuất phát đúng giờ, ghé qua nhà đón cô ấy. Ngày dài bắt đầu từ đây.</p>
+        <div class="meta"><span class="tag">Đổ xăng từ tối hôm trước</span><span class="tag">Nhắn tin trước 15 phút</span></div>
+      </div>
+    </article>
+
+    <article class="stop" data-start="11:00" data-end="12:00">
+      <div class="dot">🍗</div>
+      <div class="card">
+        <div class="time"><span>11:00</span></div>
+        <h3>Cơm gà Hội An</h3>
+        <p>Ghé mua cơm gà Hội An — món chính của bữa trưa, mang về homestay ăn cho thong thả.</p>
+        <div class="meta"><span class="tag">Mua mang đi</span><span class="tag">Nhớ mua thêm nước</span></div>
+      </div>
+    </article>
+
+    <article class="stop" data-start="12:00" data-end="17:00">
+      <div class="dot">🏡</div>
+      <div class="card">
+        <div class="time"><span>12:00</span></div>
+        <h3>Check-in homestay</h3>
+        <p>Nhận phòng, ăn trưa cùng nhau rồi nghỉ ngơi. Cả buổi chiều là của riêng hai đứa — xem phim, nghe nhạc, chụp vài tấm hình.</p>
+        <div class="meta"><span class="tag">Mang CCCD</span><span class="tag">5 tiếng thảnh thơi</span></div>
+      </div>
+    </article>
+
+    <article class="stop" data-start="17:00" data-end="18:00">
+      <div class="dot">🔑</div>
+      <div class="card">
+        <div class="time"><span>17:00</span></div>
+        <h3>Check-out</h3>
+        <p>Dọn đồ, kiểm tra lại phòng một lượt rồi trả phòng. Kiểm tra kỹ kẻo quên đồ.</p>
+        <div class="meta"><span class="tag">Sạc điện thoại</span><span class="tag">Nhìn quanh lần cuối</span></div>
+      </div>
+    </article>
+
+    <article class="stop" data-start="18:00" data-end="20:00">
+      <div class="dot">🔥</div>
+      <div class="card">
+        <div class="time"><span>18:00</span></div>
+        <h3>Nướng A Chọén</h3>
+        <p>Bữa tối no nê ở quán nướng A Chọén. Ăn thong thả, để dành sức cho tăng hai.</p>
+        <div class="meta"><span class="tag">Đặt bàn trước</span><span class="tag">Bữa tối</span></div>
+      </div>
+    </article>
+
+    <article class="stop" data-start="20:00" data-end="22:00">
+      <div class="dot">🎤</div>
+      <div class="card">
+        <div class="time"><span>20:00</span></div>
+        <h3>Hát ở Music Box</h3>
+        <p>Hai tiếng cháy hết mình. Nhớ đặt sẵn playlist mấy bài hai đứa hay hát chung.</p>
+        <div class="meta"><span class="tag">Đặt phòng trước</span><span class="tag">Playlist song ca</span></div>
+      </div>
+    </article>
+
+    <article class="stop" data-start="22:00" data-end="23:30">
+      <div class="dot">🌙</div>
+      <div class="card">
+        <div class="time"><span>22:00</span></div>
+        <h3>Về nhà</h3>
+        <p>Đưa nàng về tận cửa. Một ngày trọn vẹn khép lại — và hẹn lần sau.</p>
+        <div class="meta"><span class="tag">Đi chậm thôi</span><span class="tag">Nhắn “ngủ ngon”</span></div>
+      </div>
+    </article>
+
+  </div>
+
+  <div class="section-title">Đừng quên mang</div>
+  <div class="checks" id="checks">
+    <label class="check"><input type="checkbox" data-k="c1"><span>Sạc dự phòng &amp; cáp sạc</span></label>
+    <label class="check"><input type="checkbox" data-k="c2"><span>CCCD (để check-in homestay)</span></label>
+    <label class="check"><input type="checkbox" data-k="c3"><span>Tiền mặt + thẻ</span></label>
+    <label class="check"><input type="checkbox" data-k="c4"><span>Đặt bàn A Chọén &amp; phòng Music Box</span></label>
+    <label class="check"><input type="checkbox" data-k="c5"><span>Áo khoác mỏng cho nàng buổi tối</span></label>
+    <label class="check"><input type="checkbox" data-k="c6"><span>Xe đã đổ xăng, rửa sạch</span></label>
+  </div>
+</main>
+
+<footer>
+  <span class="heart">♥</span>
+  Chuẩn bị cho ngày 09.08.2026
+</footer>
+
+<script>
+(function(){
+  var DAY = '2026-08-09';
+
+  /* ---- Countdown tới 10:00 ---- */
+  var target = new Date(DAY + 'T10:00:00').getTime();
+  var end    = new Date(DAY + 'T22:00:00').getTime();
+  var el = {d:'cd-d',h:'cd-h',m:'cd-m',s:'cd-s'};
+  function pad(n){return String(n).padStart(2,'0');}
+  function tickCountdown(){
+    var now = Date.now(), diff = target - now;
+    if(diff <= 0){
+      document.getElementById('countdown').style.display = 'none';
+      document.getElementById('cd-msg').textContent =
+        now < end ? 'Ngày hẹn đang diễn ra 💕' : 'Một ngày thật đẹp đã trôi qua 💕';
+      return;
+    }
+    var s = Math.floor(diff/1000);
+    document.getElementById(el.d).textContent = pad(Math.floor(s/86400));
+    document.getElementById(el.h).textContent = pad(Math.floor(s%86400/3600));
+    document.getElementById(el.m).textContent = pad(Math.floor(s%3600/60));
+    document.getElementById(el.s).textContent = pad(s%60);
+  }
+  tickCountdown();
+  setInterval(tickCountdown, 1000);
+
+  /* ---- Đánh dấu mốc đang diễn ra / đã qua ---- */
+  var stops = Array.prototype.slice.call(document.querySelectorAll('.stop'));
+  function ts(hhmm){ return new Date(DAY + 'T' + hhmm + ':00').getTime(); }
+  function markProgress(){
+    var now = Date.now();
+    stops.forEach(function(st){
+      var card = st.querySelector('.card');
+      var a = ts(st.dataset.start), b = ts(st.dataset.end);
+      card.classList.remove('now','done');
+      var old = card.querySelector('.badge-now');
+      if(old) old.remove();
+      if(now >= b){ card.classList.add('done'); }
+      else if(now >= a){
+        card.classList.add('now');
+        var badge = document.createElement('span');
+        badge.className = 'badge-now';
+        badge.textContent = 'đang diễn ra';
+        card.querySelector('.time').appendChild(badge);
+      }
+    });
+  }
+  markProgress();
+  setInterval(markProgress, 30000);
+
+  /* ---- Hiện dần khi cuộn ---- */
+  if('IntersectionObserver' in window){
+    var io = new IntersectionObserver(function(entries){
+      entries.forEach(function(e){
+        if(e.isIntersecting){ e.target.classList.add('in'); io.unobserve(e.target); }
+      });
+    }, {threshold:.15, rootMargin:'0px 0px -40px 0px'});
+    stops.forEach(function(s){ io.observe(s); });
+  } else {
+    stops.forEach(function(s){ s.classList.add('in'); });
+  }
+
+  /* ---- Checklist nhớ trạng thái ---- */
+  var boxes = document.querySelectorAll('#checks input');
+  Array.prototype.forEach.call(boxes, function(b){
+    try{ if(localStorage.getItem('date-' + b.dataset.k) === '1') b.checked = true; }catch(e){}
+    b.addEventListener('change', function(){
+      try{ localStorage.setItem('date-' + b.dataset.k, b.checked ? '1' : '0'); }catch(e){}
+    });
+  });
+})();
+</script>
+</body>
+</html>
