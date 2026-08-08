@@ -121,7 +121,23 @@
     text-decoration:none;border-bottom:1px solid currentColor;padding-bottom:1px;
   }
   .maplink:hover{opacity:.75}
-  @media (max-width:520px){ .stay .body{padding:14px 16px 16px} }
+
+  .sub{
+    list-style:none;margin:16px 0 0;padding:2px 0 2px 16px;
+    border-left:2px solid var(--line);display:flex;flex-direction:column;gap:11px;
+  }
+  .sub li{display:flex;gap:12px;align-items:baseline;font-size:14px}
+  .sub .t{
+    flex:none;min-width:88px;color:var(--ink-soft);font-variant-numeric:tabular-nums;
+    font-size:13px;font-weight:600;letter-spacing:.01em;
+  }
+  .sub .a{color:var(--ink)}
+  .sub .a i{font-style:normal;margin-right:7px}
+  @media (max-width:520px){
+    .stay .body{padding:14px 16px 16px}
+    .sub li{flex-direction:column;gap:1px}
+    .sub .t{min-width:0}
+  }
 
   footer{text-align:center;padding:48px 0 60px;color:var(--ink-soft);font-size:14px}
   footer .heart{color:var(--accent);font-size:22px;display:block;margin-bottom:8px;animation:beat 1.8s ease-in-out infinite}
@@ -192,6 +208,14 @@
             <span>59A Yên Bình, Hà Đông</span>
             <a class="maplink" href="https://www.google.com/maps/search/?api=1&amp;query=Someli+Homestay+59A+Y%C3%AAn+B%C3%ACnh+H%C3%A0+%C4%90%C3%B4ng" target="_blank" rel="noopener">Xem bản đồ →</a>
           </p>
+          <ul class="sub">
+            <li><span class="t">12:00 – 12:15</span><span class="a"><i>🔑</i>Nhận phòng, cất đồ</span></li>
+            <li><span class="t">12:15 – 13:00</span><span class="a"><i>🍽️</i>Ăn trưa cơm gà</span></li>
+            <li><span class="t">13:00 – 14:30</span><span class="a"><i>😴</i>Ngủ trưa</span></li>
+            <li><span class="t">14:30 – 15:30</span><span class="a"><i>📚</i>Học bài</span></li>
+            <li><span class="t">15:30 – 16:40</span><span class="a"><i>🎬</i>Xem phim, nghe nhạc cùng nhau</span></li>
+            <li><span class="t">16:40 – 17:00</span><span class="a"><i>🧳</i>Dọn đồ, chuẩn bị trả phòng</span></li>
+          </ul>
         </div>
       </div>
     </article>
