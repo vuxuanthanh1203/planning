@@ -108,24 +108,6 @@
   }
   .card h3{margin:6px 0 6px;font-size:20px;font-weight:750;letter-spacing:-.01em}
   .card p{margin:0;color:var(--ink-soft);font-size:15px}
-  .meta{margin-top:12px;display:flex;flex-wrap:wrap;gap:8px}
-  .tag{
-    font-size:12px;color:var(--ink-soft);background:transparent;border:1px solid var(--line);
-    border-radius:999px;padding:4px 11px;
-  }
-
-  /* ---------- Checklist ---------- */
-  .checks{
-    background:var(--bg-soft);border:1px solid var(--line);border-radius:var(--radius);
-    padding:8px 20px;box-shadow:var(--shadow);margin-top:14px;
-  }
-  .check{display:flex;gap:12px;align-items:center;padding:11px 0;border-bottom:1px solid var(--line);cursor:pointer}
-  .check:last-child{border-bottom:none}
-  .check input{appearance:none;width:20px;height:20px;flex:none;border:2px solid var(--line);border-radius:7px;cursor:pointer;transition:.18s;position:relative}
-  .check input:checked{background:var(--accent);border-color:var(--accent)}
-  .check input:checked::after{content:"✓";position:absolute;inset:0;display:grid;place-items:center;color:#fff;font-size:13px;font-weight:800}
-  .check span{font-size:15px;transition:.18s}
-  .check input:checked + span{text-decoration:line-through;color:var(--ink-soft)}
 
   footer{text-align:center;padding:48px 0 60px;color:var(--ink-soft);font-size:14px}
   footer .heart{color:var(--accent);font-size:22px;display:block;margin-bottom:8px;animation:beat 1.8s ease-in-out infinite}
@@ -172,7 +154,6 @@
         <div class="time"><span>10:00</span></div>
         <h3>Đón nàng</h3>
         <p>Xuất phát đúng giờ, ghé qua nhà đón cô ấy. Ngày dài bắt đầu từ đây.</p>
-        <div class="meta"><span class="tag">Đổ xăng từ tối hôm trước</span><span class="tag">Nhắn tin trước 15 phút</span></div>
       </div>
     </article>
 
@@ -182,7 +163,6 @@
         <div class="time"><span>11:00</span></div>
         <h3>Cơm gà Hội An</h3>
         <p>Ghé mua cơm gà Hội An — món chính của bữa trưa, mang về homestay ăn cho thong thả.</p>
-        <div class="meta"><span class="tag">Mua mang đi</span><span class="tag">Nhớ mua thêm nước</span></div>
       </div>
     </article>
 
@@ -192,7 +172,6 @@
         <div class="time"><span>12:00</span></div>
         <h3>Check-in homestay</h3>
         <p>Nhận phòng, ăn trưa cùng nhau rồi nghỉ ngơi. Cả buổi chiều là của riêng hai đứa — xem phim, nghe nhạc, chụp vài tấm hình.</p>
-        <div class="meta"><span class="tag">Mang CCCD</span><span class="tag">5 tiếng thảnh thơi</span></div>
       </div>
     </article>
 
@@ -202,7 +181,6 @@
         <div class="time"><span>17:00</span></div>
         <h3>Check-out</h3>
         <p>Dọn đồ, kiểm tra lại phòng một lượt rồi trả phòng. Kiểm tra kỹ kẻo quên đồ.</p>
-        <div class="meta"><span class="tag">Sạc điện thoại</span><span class="tag">Nhìn quanh lần cuối</span></div>
       </div>
     </article>
 
@@ -210,9 +188,8 @@
       <div class="dot">🔥</div>
       <div class="card">
         <div class="time"><span>18:00</span></div>
-        <h3>Nướng A Chọén</h3>
-        <p>Bữa tối no nê ở quán nướng A Chọén. Ăn thong thả, để dành sức cho tăng hai.</p>
-        <div class="meta"><span class="tag">Đặt bàn trước</span><span class="tag">Bữa tối</span></div>
+        <h3>Nướng A Choén</h3>
+        <p>Bữa tối no nê ở quán nướng A Choén. Ăn thong thả, để dành sức cho tăng hai.</p>
       </div>
     </article>
 
@@ -222,7 +199,6 @@
         <div class="time"><span>20:00</span></div>
         <h3>Hát ở Music Box</h3>
         <p>Hai tiếng cháy hết mình. Nhớ đặt sẵn playlist mấy bài hai đứa hay hát chung.</p>
-        <div class="meta"><span class="tag">Đặt phòng trước</span><span class="tag">Playlist song ca</span></div>
       </div>
     </article>
 
@@ -232,26 +208,16 @@
         <div class="time"><span>22:00</span></div>
         <h3>Về nhà</h3>
         <p>Đưa nàng về tận cửa. Một ngày trọn vẹn khép lại — và hẹn lần sau.</p>
-        <div class="meta"><span class="tag">Đi chậm thôi</span><span class="tag">Nhắn “ngủ ngon”</span></div>
       </div>
     </article>
 
   </div>
 
-  <div class="section-title">Đừng quên mang</div>
-  <div class="checks" id="checks">
-    <label class="check"><input type="checkbox" data-k="c1"><span>Sạc dự phòng &amp; cáp sạc</span></label>
-    <label class="check"><input type="checkbox" data-k="c2"><span>CCCD (để check-in homestay)</span></label>
-    <label class="check"><input type="checkbox" data-k="c3"><span>Tiền mặt + thẻ</span></label>
-    <label class="check"><input type="checkbox" data-k="c4"><span>Đặt bàn A Chọén &amp; phòng Music Box</span></label>
-    <label class="check"><input type="checkbox" data-k="c5"><span>Áo khoác mỏng cho nàng buổi tối</span></label>
-    <label class="check"><input type="checkbox" data-k="c6"><span>Xe đã đổ xăng, rửa sạch</span></label>
-  </div>
 </main>
 
 <footer>
   <span class="heart">♥</span>
-  Chuẩn bị cho ngày 09.08.2026
+  Hẹn em, 09.08.2026
 </footer>
 
 <script>
@@ -316,14 +282,6 @@
     stops.forEach(function(s){ s.classList.add('in'); });
   }
 
-  /* ---- Checklist nhớ trạng thái ---- */
-  var boxes = document.querySelectorAll('#checks input');
-  Array.prototype.forEach.call(boxes, function(b){
-    try{ if(localStorage.getItem('date-' + b.dataset.k) === '1') b.checked = true; }catch(e){}
-    b.addEventListener('change', function(){
-      try{ localStorage.setItem('date-' + b.dataset.k, b.checked ? '1' : '0'); }catch(e){}
-    });
-  });
 })();
 </script>
 </body>
